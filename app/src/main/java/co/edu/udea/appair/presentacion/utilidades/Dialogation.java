@@ -7,7 +7,7 @@ import android.content.Context;
 /**
  * Created by OscarGallon on 18/08/14.
  */
-public abstract class Dialog {
+public abstract class Dialogation {
 
 
     private ProgressDialog progressDialog;

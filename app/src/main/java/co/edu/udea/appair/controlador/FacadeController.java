@@ -4,6 +4,7 @@ import android.app.Activity;
 
 import com.example.oscargallon.tuviaje.R;
 
+import co.edu.udea.appair.logicadelnegocio.usuario.User;
 import co.edu.udea.appair.presentacion.guiusuario.LoginActivity;
 
 /**
@@ -25,6 +26,23 @@ public class FacadeController {
             //this.loginController.showProgressDialog(activity.getResources().getString(R.string.alert_title),
               //      activity.getResources().getString(R.string.wait_message), activity);
         }
+
+    }
+
+    public void singUp(String name, String lastName, String username, String password, String email, String birthDate,
+                       String adress, String cell, String phoneNumber){
+
+        User user = new User();
+        user.setUsername(username);
+        user.setPassword(password);
+        user.setName(name);
+        user.setLastName(lastName);
+        user.setEmail(email);
+        user.setBirthDate(birthDate);
+        user.setAdress(adress);
+        user.setCell(Integer.parseInt(cell));
+        user.setPhoneNumber(Integer.parseInt(phoneNumber));
+        loginController.singUp(user);
 
     }
 

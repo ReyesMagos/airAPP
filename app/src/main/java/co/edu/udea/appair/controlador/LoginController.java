@@ -5,12 +5,12 @@ import android.content.Context;
 import co.edu.udea.appair.logicadelnegocio.usuario.User;
 import co.edu.udea.appair.persistencia.dao.UserDAO;
 import co.edu.udea.appair.presentacion.guiusuario.LoginActivity;
-import co.edu.udea.appair.presentacion.utilidades.Dialog;
+import co.edu.udea.appair.presentacion.utilidades.Dialogation;
 
 /**
  * Created by OscarGallon on 18/08/14.
  */
-public class LoginController extends Dialog {
+public class LoginController extends Dialogation {
 
     private LoginActivity activity;
 
@@ -25,6 +25,7 @@ public class LoginController extends Dialog {
         userDAO.singUpUser(user);
 
     }
+
 
     @Override
     public void showProgressDialog(String title, String message, Context context) {
