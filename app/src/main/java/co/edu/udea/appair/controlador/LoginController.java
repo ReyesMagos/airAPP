@@ -6,7 +6,7 @@ import android.content.Intent;
 import co.edu.udea.appair.logicadelnegocio.usuario.User;
 import co.edu.udea.appair.persistencia.dao.UserDAO;
 import co.edu.udea.appair.presentacion.guiusuario.LoginActivity;
-import co.edu.udea.appair.presentacion.guivuelos.BusquedaVuelosActivity;
+import co.edu.udea.appair.presentacion.guivuelos.SearchFlightsActivity;
 import co.edu.udea.appair.presentacion.utilidades.Dialogation;
 
 /**
@@ -41,7 +41,7 @@ public class LoginController extends Dialogation {
 
 
     public void changeTOSearch(){
-        Intent i = new Intent(activity, BusquedaVuelosActivity.class);
+        Intent i = new Intent(activity, SearchFlightsActivity.class);
         getActivity().startActivity(i);
     }
 

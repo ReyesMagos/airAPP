@@ -20,7 +20,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="co.edu.udea.appair.presentacion.guivuelos.BusquedaVuelosActivity"
+            android:name="co.edu.udea.appair.presentacion.guivuelos.SearchFlightsActivity"
             android:label="@string/title_activity_busqueda_vuelos" >
         </activity>
     </application>

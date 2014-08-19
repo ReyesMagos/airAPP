@@ -10,7 +10,7 @@ import android.widget.DatePicker;
 
 import com.example.oscargallon.tuviaje.R;
 
-public class BusquedaVuelosActivity extends Activity {
+public class SearchFlightsActivity extends Activity {
 
     private DatePicker dpFechaIda;
 
@@ -18,6 +18,7 @@ public class BusquedaVuelosActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_busqueda_vuelos);
+        init();
     }
 
     public void init(){
@@ -33,10 +34,14 @@ public class BusquedaVuelosActivity extends Activity {
 
     public void search(View v){
         String date="";
+        String month="";
         date += dpFechaIda.getDayOfMonth()+"/";
-        date += dpFechaIda.getMonth()+"/";
+        month+=dpFechaIda.getMonth();
+        if(month.length()==1)
+            month="0"+month;
+        date += month+"/";
         date += dpFechaIda.getYear();
-        Log.i("Fecha: ", String.format("{1} ", date));
+        Log.i("Fecha: ", String.format("la fecha es: %s ", date));
     }
 
     @Override
