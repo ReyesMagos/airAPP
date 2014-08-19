@@ -115,6 +115,12 @@ public class LoginActivity extends Activity {
     }
 
 
+    public void login(View v){
+        facadeController.login("oscarg798","oscardx");
+
+    }
+
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
