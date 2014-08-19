@@ -1,17 +1,14 @@
 package co.edu.udea.appair.persistencia.dao;
 
-import com.parse.LogInCallback;
-import com.parse.Parse;
 import com.parse.ParseException;
 import com.parse.ParseUser;
-import com.parse.SignUpCallback;
 
 import co.edu.udea.appair.logicadelnegocio.usuario.User;
 
 /**
  * Created by OscarGallon on 18/08/14.
  */
-public class UserDAO implements IUsuarioDao {
+public class UserDAO implements IUsuarioDAO {
 
     @Override
     public User getUser(String username, String password) {

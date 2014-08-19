@@ -30,8 +30,8 @@ public class FacadeController {
             this.loginController = new LoginController((LoginActivity) activity);
             //this.loginController.showProgressDialog(activity.getResources().getString(R.string.alert_title),
             //      activity.getResources().getString(R.string.wait_message), activity);
-        }else if(activity instanceof SearchFlightsActivity){
-            this.searchController= new SearchController((SearchFlightsActivity)activity);
+        } else if (activity instanceof SearchFlightsActivity) {
+            this.searchController = new SearchController((SearchFlightsActivity) activity);
         }
 
     }
@@ -67,8 +67,8 @@ public class FacadeController {
         if (user != null) {
 
             loginController.changeTOSearch();
-        }else{
-          Log.i("Error", "Error en el Login");
+        } else {
+            Log.i("Error", "Error en el Login");
         }
 
     }
