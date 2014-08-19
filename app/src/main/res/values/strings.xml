@@ -15,4 +15,9 @@
     <string name="cell_label">Celular</string>
     <string name="phone_number_label">Telefono</string>
     <string name="birth_date_label">Fecha de Nacimiento</string>
+    <string name="title_activity_busqueda_vuelos">BusquedaVuelosActivity</string>
+    <string name="ciudad_origen_label">Ciudad de Origen</string>
+    <string name="ciudad_destino_label">Ciudad de Destino</string>
+    <string name="fecha_label">Fecha Ida</string>
+
 </resources>

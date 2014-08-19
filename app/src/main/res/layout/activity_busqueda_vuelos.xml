@@ -1,0 +1,94 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="co.edu.udea.appair.presentacion.guivuelos.BusquedaVuelosActivity">
+
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_gravity="center_horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/ciudad_origen_label"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:id="@+id/tlblCiudadOrigen" />
+
+        <Spinner
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:id="@+id/spCiudadOrigen"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_gravity="center_horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/ciudad_destino_label"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:id="@+id/lblCiudadDestino" />
+
+
+        <Spinner
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/spCiudadDestino"
+            android:layout_gravity="center"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_gravity="center_horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/fecha_label"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:id="@+id/lblFecha" />
+
+        <DatePicker
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/dpFechaIda"
+            android:layout_weight="1"
+            android:calendarViewShown="false" />
+
+
+    </LinearLayout>
+
+
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:id="@+id/btnSearch"
+            android:layout_weight="1"
+            android:onClick="search"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/ic_launcher" />
+
+</LinearLayout>

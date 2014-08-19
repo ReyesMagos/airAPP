@@ -21,14 +21,22 @@ import co.edu.udea.appair.controlador.FacadeController;
 public class LoginActivity extends Activity {
 
     private  FacadeController facadeController;
+    private EditText txtUsername;
+    private EditText txtPassword;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_inicio);
         Parse.initialize(this, "pdiXlN65BweJPjTx46Xtv4SfCkIw3yE0aSHkTw2w", "SsdbdZ2rj0xAWPe2esH4wP6pQYcZj9V0fkpJIuWy");
+        init();
         facadeController = FacadeController.getInstance();
         facadeController.registerActities(this );
+    }
+
+    public void init(){
+        txtUsername = (EditText) findViewById(R.id.txtUsername);
+        txtPassword= (EditText) findViewById(R.id.txtPassword);
     }
 
     public void singUp(View v) {
@@ -116,7 +124,10 @@ public class LoginActivity extends Activity {
 
 
     public void login(View v){
-        facadeController.login("oscarg798","oscardx");
+        String username= txtUsername.getText().toString();
+        String password = txtPassword.getText().toString();
+        if(username!=null && username.length()>5 && password!=null && password.length()>5)
+        facadeController.login(username,password);
 
     }
 

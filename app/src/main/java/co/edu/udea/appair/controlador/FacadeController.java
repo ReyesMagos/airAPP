@@ -50,7 +50,7 @@ public class FacadeController {
     public void login(String username, String password){
         user= loginController.login(username,password);
         if(user!=null){
-
+            loginController.changeTOSearch();
         }
 
     }
