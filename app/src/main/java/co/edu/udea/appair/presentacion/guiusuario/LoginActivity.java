@@ -65,7 +65,7 @@ public class LoginActivity extends Activity {
                 .findViewById(R.id.txtCell);
 
 
-        ImageView btnOk = (ImageView) dialog.findViewById(R.id.btnSingUp);
+        ImageView btnOk = (ImageView) dialog.findViewById(R.id.btnOk);
         ImageView btnCancel = (ImageView) dialog.findViewById(R.id.btnCancel);
 
         // if button is clicked, close the custom dialog

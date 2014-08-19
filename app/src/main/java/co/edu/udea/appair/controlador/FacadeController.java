@@ -40,8 +40,8 @@ public class FacadeController {
         user.setEmail(email);
         user.setBirthDate(birthDate);
         user.setAdress(adress);
-        user.setCell(Integer.parseInt(cell));
-        user.setPhoneNumber(Integer.parseInt(phoneNumber));
+        user.setCell(Integer.parseInt("32442"));
+        user.setPhoneNumber(Integer.parseInt("33443"));
         loginController.singUp(user);
 
     }
