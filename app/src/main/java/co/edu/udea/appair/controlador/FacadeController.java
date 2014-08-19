@@ -15,6 +15,7 @@ public class FacadeController {
 
     public static  FacadeController instance;
     private LoginController loginController;
+    private User user;
 
     private FacadeController() {
     }
@@ -47,7 +48,10 @@ public class FacadeController {
     }
 
     public void login(String username, String password){
+        user= loginController.login(username,password);
+        if(user!=null){
 
+        }
 
     }
 

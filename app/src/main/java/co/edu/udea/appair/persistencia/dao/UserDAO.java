@@ -27,6 +27,7 @@ public class UserDAO implements IUsuarioDao {
             user.setCell(parseUser.getInt("cell"));
             user.setPhoneNumber(parseUser.getInt("phoneNumber"));
             user.setObjectId(parseUser.getObjectId());
+            user.setUser(parseUser);
             return  user;
 
         }catch(ParseException e){

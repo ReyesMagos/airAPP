@@ -1,5 +1,7 @@
 package co.edu.udea.appair.logicadelnegocio.usuario;
 
+import com.parse.ParseUser;
+
 /**
  * Created by OscarGallon on 18/08/14.
  */
@@ -15,6 +17,15 @@ public class User {
     private int phoneNumber;
     private String objectId;
     private String name;
+    private ParseUser user;
+
+    public ParseUser getUser() {
+        return user;
+    }
+
+    public void setUser(ParseUser user) {
+        this.user = user;
+    }
 
     public String getName() {
         return name;
