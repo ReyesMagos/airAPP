@@ -35,8 +35,10 @@ public class SearchFlightsActivity extends Activity {
     public void search(View v){
         String date="";
         String month="";
+        int m =dpFechaIda.getMonth();
+        m+=1;
         date += dpFechaIda.getDayOfMonth()+"/";
-        month+=dpFechaIda.getMonth();
+        month+=m;
         if(month.length()==1)
             month="0"+month;
         date += month+"/";
