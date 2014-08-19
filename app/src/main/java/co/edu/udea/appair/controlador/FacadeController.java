@@ -46,6 +46,11 @@ public class FacadeController {
 
     }
 
+    public void login(String username, String password){
+
+
+    }
+
     public static FacadeController getInstance() {
         if(instance==null)
             instance= new FacadeController();

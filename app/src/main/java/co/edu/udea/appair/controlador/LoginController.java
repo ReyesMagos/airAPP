@@ -32,6 +32,11 @@ public class LoginController extends Dialogation {
         super.showProgressDialog(title, message, context);
     }
 
+    public void login(String username, String password){
+        UserDAO userDAO= new UserDAO();
+        userDAO.getUser(username, password);
+    }
+
 
 
     @Override
