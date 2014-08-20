@@ -28,8 +28,16 @@ public class ItineraryDAOThread extends AsyncTask<ParseQuery, String, Boolean> {
     @Override
     protected void onPostExecute(Boolean aBoolean) {
         super.onPostExecute(aBoolean);
-        if(aBoolean)
+        if(aBoolean){
+            if(this.lista.size()==0)
+              itineraryDAO.showEmptyResults();
             itineraryDAO.returnItinerariesList(lista);
+
+        }else{
+            itineraryDAO.showSearchError();
+        }
+
+
 
     }
 
@@ -51,6 +59,7 @@ public class ItineraryDAOThread extends AsyncTask<ParseQuery, String, Boolean> {
                 itinerary.setDepartureHour(parseObject.getString("departureHour"));
                 itinerary.setArrivalHour(parseObject.getString("arrivalHour"));
                 itinerary.setPrice(parseObject.getString("tarifa"));
+                itinerary.setItinerary(parseObject);
                 listaItinerario.add(itinerary);
 
 

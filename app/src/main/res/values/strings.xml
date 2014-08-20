@@ -23,5 +23,6 @@
     <string name="hora_llegada_label">Hora llegada</string>
     <string name="hora_salida_label">Hora Salida</string>
     <string name="title_activity_itinerary_result">ItineraryResultActivity</string>
+    <string name="title_activity_flight_details">FlightDetailsActivity</string>
 
 </resources>

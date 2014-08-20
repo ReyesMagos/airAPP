@@ -1,5 +1,8 @@
 package co.edu.udea.appair.logicadelnegocio.usuario;
 
+import com.parse.Parse;
+import com.parse.ParseObject;
+
 /**
  * Created by OscarGallon on 19/08/14.
  */
@@ -13,6 +16,16 @@ public class Itinerary {
     private String departureHour;
     private String arrivalHour;
     private String price;
+    private ParseObject itinerary;
+
+
+    public ParseObject getItinerary() {
+        return itinerary;
+    }
+
+    public void setItinerary(ParseObject itinerary) {
+        this.itinerary = itinerary;
+    }
 
     public String getPrice() {
         return price;

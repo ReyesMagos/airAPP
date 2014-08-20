@@ -27,6 +27,10 @@
             android:name="co.edu.udea.appair.presentacion.guivuelos.ItineraryResultActivity"
             android:label="@string/title_activity_itinerary_result" >
         </activity>
+        <activity
+            android:name="co.edu.udea.appair.presentacion.guivuelos.FlightDetailsActivity"
+            android:label="@string/title_activity_flight_details" >
+        </activity>
     </application>
 
 </manifest>

@@ -11,6 +11,7 @@ import java.util.List;
 import co.edu.udea.appair.logicadelnegocio.usuario.Itinerary;
 import co.edu.udea.appair.logicadelnegocio.usuario.User;
 import co.edu.udea.appair.presentacion.guiusuario.LoginActivity;
+import co.edu.udea.appair.presentacion.guivuelos.ItineraryResultActivity;
 import co.edu.udea.appair.presentacion.guivuelos.SearchFlightsActivity;
 
 /**
@@ -22,6 +23,7 @@ public class FacadeController {
     public static FacadeController instance;
     private LoginController loginController;
     private SearchController searchController;
+    private ItinerarioResultController itinerarioResultController;
     private User user;
     private Itinerary itinerary;
 
@@ -36,8 +38,14 @@ public class FacadeController {
             //      activity.getResources().getString(R.string.wait_message), activity);
         } else if (activity instanceof SearchFlightsActivity) {
             this.searchController = new SearchController((SearchFlightsActivity) activity);
+        }else if(activity instanceof ItineraryResultActivity){
+            this.itinerarioResultController= new ItinerarioResultController((ItineraryResultActivity)activity);
         }
 
+    }
+
+    public void showItineraryInformation(){
+        this.itinerarioResultController.setItineraryValues();
     }
 
     public void singUp(String name, String lastName, String username, String password, String email, String birthDate,
@@ -98,11 +106,27 @@ public class FacadeController {
 
         searchController.showProgressDialog("Alerta", "Buscando Por favor Espere", searchController.getActivity());
 
-        List<Itinerary> lista= searchController.searchFlights(departureCity, arrivalCity, departureDate, arrivalDate);
-        if(lista!=null)
-                searchController.showSearchResults(lista) ;
+        searchController.searchFlights(departureCity, arrivalCity, departureDate, arrivalDate);
+
+
+
+    }
+
+    public void showSearchErrorMessage(){
+        searchController.showAlertMessage("Error en la busqueda","Error", searchController.getActivity());
+    }
+
+    public void showEmptyResultMessage(){
+        searchController.showAlertMessage("Los parametros no devolvieron resultados","Alerta", searchController.getActivity());
+    }
+
+    public void showFligths(List<Itinerary> lista){
 
         searchController.dismissProgressDialog();
+        searchController.showSearchResults(lista) ;
+    }
+
+    public void showSelectedItinerary(){
 
     }
 

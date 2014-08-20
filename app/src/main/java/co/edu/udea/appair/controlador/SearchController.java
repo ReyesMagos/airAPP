@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.widget.ArrayAdapter;
 
 import com.example.oscargallon.tuviaje.R;
@@ -12,6 +13,7 @@ import java.util.List;
 
 import co.edu.udea.appair.logicadelnegocio.usuario.Itinerary;
 import co.edu.udea.appair.persistencia.dao.ItineraryDAO;
+import co.edu.udea.appair.presentacion.guivuelos.ItineraryResultActivity;
 import co.edu.udea.appair.presentacion.guivuelos.SearchFlightsActivity;
 import co.edu.udea.appair.presentacion.utilidades.Dialogation;
 
@@ -34,9 +36,14 @@ public class SearchController extends Dialogation{
         this.activity = activity;
     }
 
-    public List<Itinerary> searchFlights(String departureCity, String arrivalCity, String departureDate, String arrivalDate){
+    public void searchFlights(String departureCity, String arrivalCity, String departureDate, String arrivalDate){
         ItineraryDAO itineraryDAO = new ItineraryDAO();
-        return  itineraryDAO.getItineraries(departureCity, arrivalCity,departureDate, arrivalDate);
+        itineraryDAO.getItineraries(departureCity, arrivalCity,departureDate, arrivalDate);
+    }
+
+    @Override
+    public void showAlertMessage(String mensaje, String titulo, Activity actividad) {
+        super.showAlertMessage(mensaje, titulo, actividad);
     }
 
     @Override
@@ -74,6 +81,7 @@ public class SearchController extends Dialogation{
                 public void onClick(DialogInterface arg0, int arg1) {
                     FacadeController facadeController = FacadeController.getInstance();
                     facadeController.setItinerary(lista.get(arg1));
+                    showSelectedItinerary();
 
 
                 }
@@ -83,6 +91,12 @@ public class SearchController extends Dialogation{
         }
 
 
+    }
+
+    public void showSelectedItinerary(){
+
+        Intent i = new Intent(getActivity(), ItineraryResultActivity.class);
+        getActivity().startActivity(i);
     }
 
 

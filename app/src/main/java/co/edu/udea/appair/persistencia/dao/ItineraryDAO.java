@@ -11,6 +11,7 @@ import com.parse.ParseQuery;
 import java.util.ArrayList;
 import java.util.List;
 
+import co.edu.udea.appair.controlador.FacadeController;
 import co.edu.udea.appair.logicadelnegocio.usuario.Itinerary;
 import co.edu.udea.appair.persistencia.utilities.ItineraryDAOThread;
 
@@ -35,7 +36,18 @@ public class ItineraryDAO implements IItineraryDAO {
     }
 
     public void returnItinerariesList(List<Itinerary> lista){
+        FacadeController facadeController = FacadeController.getInstance();
+        facadeController.showFligths(lista);
+    }
 
+    public void showSearchError(){
+        FacadeController facadeController = FacadeController.getInstance();
+        facadeController.showSearchErrorMessage();
+    }
+
+    public void showEmptyResults(){
+        FacadeController facadeController = FacadeController.getInstance();
+        facadeController.showEmptyResultMessage();
     }
 
 

@@ -7,138 +7,153 @@
 
 
     <LinearLayout
-        android:orientation="horizontal"
         android:layout_width="fill_parent"
+        android:layout_height="0dp"
         android:layout_weight="1"
-        android:layout_height="0dp">
+        android:orientation="horizontal">
 
         <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:text="@string/ciudad_origen_label"
-            android:layout_weight="1"
             android:id="@+id/lblDepartureCity"
-            android:layout_gravity="center_horizontal" />
-
-        <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="New Text"
+            android:layout_gravity="center_horizontal"
             android:layout_weight="1"
-            android:id="@+id/txtDepartureCity" />
+            android:text="@string/ciudad_origen_label" />
+
+        <TextView
+            android:id="@+id/txtDepartureCity"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="New Text" />
     </LinearLayout>
 
     <LinearLayout
-        android:orientation="horizontal"
         android:layout_width="fill_parent"
+        android:layout_height="0dp"
         android:layout_weight="1"
-        android:layout_height="0dp">
+        android:orientation="horizontal">
 
         <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:text="@string/ciudad_destino_label"
-            android:layout_weight="1"
             android:id="@+id/lblArrivalCity"
-            android:layout_gravity="center_horizontal" />
-
-        <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="New Text"
+            android:layout_gravity="center_horizontal"
             android:layout_weight="1"
-            android:id="@+id/txtArrivalCity" />
+            android:text="@string/ciudad_destino_label" />
+
+        <TextView
+            android:id="@+id/txtArrivalCity"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="New Text" />
     </LinearLayout>
 
     <LinearLayout
-        android:orientation="horizontal"
         android:layout_width="fill_parent"
+        android:layout_height="0dp"
         android:layout_weight="1"
-        android:layout_height="0dp">
+        android:orientation="horizontal">
 
         <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:text="@string/fecha_label"
-            android:layout_weight="1"
             android:id="@+id/lblDepartureDate"
-            android:layout_gravity="center_horizontal" />
-
-        <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="New Text"
+            android:layout_gravity="center_horizontal"
             android:layout_weight="1"
-            android:id="@+id/txtDepartureDate" />
+            android:text="@string/fecha_label" />
+
+        <TextView
+            android:id="@+id/txtDepartureDate"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="New Text" />
     </LinearLayout>
 
     <LinearLayout
-        android:orientation="horizontal"
         android:layout_width="fill_parent"
+        android:layout_height="0dp"
         android:layout_weight="1"
-        android:layout_height="0dp">
+        android:orientation="horizontal">
 
         <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:text="@string/fecha_llegada_label"
-            android:layout_weight="1"
             android:id="@+id/lblArrivalDate"
-            android:layout_gravity="center_horizontal" />
-
-        <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="New Text"
+            android:layout_gravity="center_horizontal"
             android:layout_weight="1"
-            android:id="@+id/txtArrivalDate" />
+            android:text="@string/fecha_llegada_label" />
+
+        <TextView
+            android:id="@+id/txtArrivalDate"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="New Text" />
     </LinearLayout>
 
     <LinearLayout
-        android:orientation="horizontal"
         android:layout_width="fill_parent"
+        android:layout_height="0dp"
         android:layout_weight="1"
-        android:layout_height="0dp">
+        android:orientation="horizontal">
 
         <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:text="@string/hora_salida_label"
-            android:layout_weight="1"
             android:id="@+id/lblDepartureHour"
-            android:layout_gravity="center_horizontal" />
-
-        <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="New Text"
+            android:layout_gravity="center_horizontal"
             android:layout_weight="1"
-            android:id="@+id/txtDepartureHour" />
+            android:text="@string/hora_salida_label" />
+
+        <TextView
+            android:id="@+id/txtDepartureHour"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="New Text" />
     </LinearLayout>
 
     <LinearLayout
-        android:orientation="horizontal"
         android:layout_width="fill_parent"
+        android:layout_height="0dp"
         android:layout_weight="1"
-        android:layout_height="0dp">
+        android:orientation="horizontal">
 
         <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:text="@string/hora_salida_label"
-            android:layout_weight="1"
             android:id="@+id/lblDearp"
-            android:layout_gravity="center_horizontal" />
-
-        <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="New Text"
+            android:layout_gravity="center_horizontal"
             android:layout_weight="1"
-            android:id="@+id/txtArrivalHour" />
+            android:text="@string/hora_salida_label" />
+
+
+        <TextView
+            android:id="@+id/txtArrivalHour"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="New Text" />
     </LinearLayout>
 
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
 
+        <ImageView
+            android:id="@+id/btnShowFligths"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="showFlights"
+            android:src="@drawable/ic_launcher" />
+
+    </LinearLayout>
 
 
 </LinearLayout>

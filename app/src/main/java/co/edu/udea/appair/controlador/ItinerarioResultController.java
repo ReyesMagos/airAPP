@@ -17,6 +17,16 @@ public class ItinerarioResultController {
         this.itinerary = facadeController.getItinerary();
     }
 
+    public void setItineraryValues(){
+        FacadeController facadeController = FacadeController.getInstance();
+        Itinerary itinerary =facadeController.getItinerary();
+        this.getActivity().getDepartureCity().setText(itinerary.getDepartureCity());
+        this.getActivity().getDepartureDate().setText(itinerary.getDepartureDate());
+        this.getActivity().getDepartureHour().setText(itinerary.getDepartureHour());
+        this.getActivity().getArrivalCity().setText(itinerary.getArrivalCity());
+        this.getActivity().getArrivalDate().setText(itinerary.getArrivalDate());
+        this.getActivity().getArrivalHour().setText(itinerary.getArrivalHour());
+    }
     public Itinerary getItinerary() {
         return itinerary;
     }
