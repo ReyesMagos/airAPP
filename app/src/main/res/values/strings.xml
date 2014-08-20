@@ -19,5 +19,9 @@
     <string name="ciudad_origen_label">Ciudad de Origen</string>
     <string name="ciudad_destino_label">Ciudad de Destino</string>
     <string name="fecha_label">Fecha Ida</string>
+    <string name="fecha_llegada_label">Fecha Llegada</string>
+    <string name="hora_llegada_label">Hora llegada</string>
+    <string name="hora_salida_label">Hora Salida</string>
+    <string name="title_activity_itinerary_result">ItineraryResultActivity</string>
 
 </resources>

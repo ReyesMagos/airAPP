@@ -23,6 +23,10 @@
             android:name="co.edu.udea.appair.presentacion.guivuelos.SearchFlightsActivity"
             android:label="@string/title_activity_busqueda_vuelos" >
         </activity>
+        <activity
+            android:name="co.edu.udea.appair.presentacion.guivuelos.ItineraryResultActivity"
+            android:label="@string/title_activity_itinerary_result" >
+        </activity>
     </application>
 
 </manifest>

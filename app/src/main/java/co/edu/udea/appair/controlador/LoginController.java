@@ -1,5 +1,6 @@
 package co.edu.udea.appair.controlador;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 
@@ -34,9 +35,9 @@ public class LoginController extends Dialogation {
         super.showProgressDialog(title, message, context);
     }
 
-    public User login(String username, String password){
+    public void login(String username, String password){
         UserDAO userDAO= new UserDAO();
-        return userDAO.getUser(username, password);
+        userDAO.getUser(username, password);
     }
 
 
@@ -45,7 +46,10 @@ public class LoginController extends Dialogation {
         getActivity().startActivity(i);
     }
 
-
+    @Override
+    public void showAlertMessage(String mensaje, String titulo, Activity actividad) {
+        super.showAlertMessage(mensaje, titulo, actividad);
+    }
 
     @Override
     public void dismissProgressDialog() {

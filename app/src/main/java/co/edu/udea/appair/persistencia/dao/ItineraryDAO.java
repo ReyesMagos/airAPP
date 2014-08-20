@@ -8,30 +8,35 @@ import com.parse.ParseException;
 import com.parse.ParseObject;
 import com.parse.ParseQuery;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import co.edu.udea.appair.logicadelnegocio.usuario.Itinerary;
+import co.edu.udea.appair.persistencia.utilities.ItineraryDAOThread;
 
 /**
  * Created by OscarGallon on 19/08/14.
  */
 public class ItineraryDAO implements IItineraryDAO {
     @Override
-    public List<Itinerary> getItineraries(String departureCity, String arrivalCity, String departureDate, String arrivalDate){
+    public void getItineraries(String departureCity, String arrivalCity, String departureDate, String arrivalDate) {
         ParseQuery query = new ParseQuery("Itinerary");
 
-        query.whereEqualTo("Brand", "Burnettes");
+        query.whereEqualTo("departureCity", departureCity);
+        query.whereEqualTo("arrivalCity", arrivalCity);
+        query.whereEqualTo("departureDate", departureDate);
+        if (arrivalDate != null)
+            query.whereEqualTo("arrivalDate", arrivalDate);
 
-        query.findInBackground(new FindCallback() {
-            @Override
-            public void done(List list, ParseException e) {
-                if(e==null){
+        ItineraryDAOThread itineraryDAOThread = new ItineraryDAOThread(this);
+        itineraryDAOThread.execute(query);
 
-                }
 
-            }
-        });
-
-        return null;
     }
+
+    public void returnItinerariesList(List<Itinerary> lista){
+
+    }
+
+
 }

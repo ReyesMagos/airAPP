@@ -10,6 +10,33 @@ public class Itinerary {
     private String arrivalCity;
     private String departureDate;
     private String arrivalDate;
+    private String departureHour;
+    private String arrivalHour;
+    private String price;
+
+    public String getPrice() {
+        return price;
+    }
+
+    public void setPrice(String price) {
+        this.price = price;
+    }
+
+    public String getDepartureHour() {
+        return departureHour;
+    }
+
+    public void setDepartureHour(String departureHour) {
+        this.departureHour = departureHour;
+    }
+
+    public String getArrivalHour() {
+        return arrivalHour;
+    }
+
+    public void setArrivalHour(String arrivalHour) {
+        this.arrivalHour = arrivalHour;
+    }
 
     public String getObjectId() {
         return objectId;

@@ -1,8 +1,11 @@
 package co.edu.udea.appair.presentacion.utilidades;
 
 
+import android.app.Activity;
+import android.app.AlertDialog;
 import android.app.ProgressDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 
 /**
  * Created by OscarGallon on 18/08/14.
@@ -27,6 +30,23 @@ public abstract class Dialogation {
         if(this.progressDialog!=null){
             this.progressDialog.dismiss();
         }
+    }
+
+    public  void showAlertMessage(String mensaje, String titulo, Activity actividad) {
+        AlertDialog.Builder builder = new AlertDialog.Builder(actividad);
+
+        builder.setTitle(titulo);
+
+        builder.setMessage(mensaje).setPositiveButton("Aceptar",
+                new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+
+                    }
+                });
+
+        AlertDialog dialog = builder.show();
+        dialog.show();
+
     }
 
 

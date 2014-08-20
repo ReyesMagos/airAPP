@@ -10,9 +10,9 @@ import co.edu.udea.appair.logicadelnegocio.usuario.User;
 public interface IUsuarioDAO {
 
 
-    public User getUser(String username, String password);
+    public void getUser(String username, String password);
 
-    public boolean singUpUser(User user);
+    public void singUpUser(User user);
 
 
 

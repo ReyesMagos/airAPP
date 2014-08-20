@@ -10,7 +10,7 @@ import co.edu.udea.appair.logicadelnegocio.usuario.Itinerary;
 public interface IItineraryDAO {
 
 
-    public List<Itinerary> getItineraries(String departureCity,
+    public void getItineraries(String departureCity,
                                           String arrivalCity, String departureDate,
                                           String arrivalDate);
 

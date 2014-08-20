@@ -6,6 +6,9 @@ import android.util.Log;
 import com.example.oscargallon.tuviaje.R;
 
 
+import java.util.List;
+
+import co.edu.udea.appair.logicadelnegocio.usuario.Itinerary;
 import co.edu.udea.appair.logicadelnegocio.usuario.User;
 import co.edu.udea.appair.presentacion.guiusuario.LoginActivity;
 import co.edu.udea.appair.presentacion.guivuelos.SearchFlightsActivity;
@@ -20,6 +23,7 @@ public class FacadeController {
     private LoginController loginController;
     private SearchController searchController;
     private User user;
+    private Itinerary itinerary;
 
     private FacadeController() {
     }
@@ -53,7 +57,7 @@ public class FacadeController {
         user.setCell(Integer.parseInt("32442"));
         user.setPhoneNumber(Integer.parseInt("33443"));
         loginController.singUp(user);
-        loginController.dismissProgressDialog();
+
 
     }
 
@@ -62,15 +66,76 @@ public class FacadeController {
         loginController.showProgressDialog(loginController.getActivity().getResources().getString(R.string.alert_title),
                 loginController.getActivity().getResources().getString(R.string.wait_message),
                 loginController.getActivity());
-        user = loginController.login(username, password);
+        loginController.login(username, password);
+
+
+
+    }
+
+    public void grantUserAccess(User user){
+        this.user= user;
+        getLoginController().changeTOSearch();
         loginController.dismissProgressDialog();
-        if (user != null) {
 
-            loginController.changeTOSearch();
-        } else {
-            Log.i("Error", "Error en el Login");
-        }
+    }
 
+    public void showUserLoginErrorMessage(){
+        loginController.dismissProgressDialog();
+        loginController.showAlertMessage("Usuario o Contraseña Invalidos", "Alerta", loginController.getActivity());
+    }
+
+    public void showUserSingUpMessage(){
+        loginController.dismissProgressDialog();
+        loginController.showAlertMessage("Registro con Exito", "Alerta",loginController.getActivity());
+    }
+
+    public void showSingUpErrorMessage(){
+        loginController.dismissProgressDialog();
+        loginController.showAlertMessage("Error En el registro","Alerta",loginController.getActivity());
+    }
+
+    public void searchFlight(String departureCity, String arrivalCity, String departureDate, String arrivalDate) {
+
+        searchController.showProgressDialog("Alerta", "Buscando Por favor Espere", searchController.getActivity());
+
+        List<Itinerary> lista= searchController.searchFlights(departureCity, arrivalCity, departureDate, arrivalDate);
+        if(lista!=null)
+                searchController.showSearchResults(lista) ;
+
+        searchController.dismissProgressDialog();
+
+    }
+
+    public LoginController getLoginController() {
+        return loginController;
+    }
+
+    public void setLoginController(LoginController loginController) {
+        this.loginController = loginController;
+    }
+
+    public SearchController getSearchController() {
+        return searchController;
+    }
+
+    public void setSearchController(SearchController searchController) {
+        this.searchController = searchController;
+    }
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
+    }
+
+    public Itinerary getItinerary() {
+        return itinerary;
+    }
+
+    public void setItinerary(Itinerary itinerary) {
+        this.itinerary = itinerary;
     }
 
     public static FacadeController getInstance() {
